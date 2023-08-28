@@ -3,4 +3,5 @@
   hosts: Mongodb
   tasks:
   - name: pinging the server
-    ansible.bulitin.ping:
+    
+    ansible.builtin.ping:
