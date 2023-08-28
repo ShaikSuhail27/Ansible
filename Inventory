@@ -1,14 +1,4 @@
 [Mongodb]
-Roboshop-us-dev-db-mongodb.01.suhaildevops.online
+roboshop-us-dev-db-mongodb.01.suhaildevops.online
 
-[Catalogue]
-Roboshop-us-dev-app-Catalogue.01.suhaildevops.online
-Roboshop-us-dev-app-Catalogue.02.suhaildevops.online
 
-[mysql]
-Roboshop-us-dev-db-mysql.01.suhaildevops.online
-Roboshop-us-dev-db-mysql.02.suhaildevops.online
-
-[db:children]
-Mongodb
-mysql
