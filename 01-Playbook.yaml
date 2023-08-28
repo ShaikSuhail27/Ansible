@@ -1,6 +1,6 @@
 #Playbook is always a list of plays so it should start with -
 - name: ping the node
-  Hosts: Mongodb
+  hosts: Mongodb
   Tasks:
   - name: pinging the server
     ansible.bulitin.ping:
