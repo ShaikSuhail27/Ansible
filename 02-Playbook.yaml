@@ -1,5 +1,6 @@
 - name: install and run nginx
   hosts: Mongodb
+  become: yes # this will give root or sudo access
   tasks:
   - name: Install nginx
     ansible.builtin.yum:
