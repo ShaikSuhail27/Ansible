@@ -10,3 +10,11 @@
   - name: printing
     ansible.builtin.debug: 
       msg: The output is {{USERID}}
+  - name: printing the exit status
+    ansible.builtin.debug:
+      msg: "{{USERID.rc}}"
+  - name: creating roboshop user
+    become: yes
+    ansible.builtin.user:
+      name: Roboshop
+    when: USERID.rc !=0
