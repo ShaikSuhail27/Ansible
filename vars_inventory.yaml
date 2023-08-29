@@ -1,0 +1,6 @@
+- name: variables from inventory level
+  hosts: Mongodb
+  tasks:
+  - name: printing th variables from inventory
+    ansible.builtin.debug:
+      msg: "username is {{MONGODB_USERNAME}}"
