@@ -1,0 +1,11 @@
+- name: Need to create the user
+  hosts: localhost
+  tasks:
+  - name: check if the user exists
+  # the below line is used to run linux command directly when ansible module is not available
+    ansible.builtin.command: id roboshop
+    register: USERID
+  
+  - name: printing
+    ansible.builtin.debug: 
+      msg: The output is {{USERID}}
