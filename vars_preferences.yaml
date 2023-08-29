@@ -2,8 +2,8 @@
   hosts: Mongodb
   vars:
     NAME: SUHAIL-play
-  vars_files:
-  - Variable_file.yaml
+  # vars_files:
+  # - Variable_file.yaml
   vars_prompt:
     name: NAME
     prompt: please enter the name
