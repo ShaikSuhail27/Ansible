@@ -3,8 +3,9 @@
   tasks:
   - name: check if the user exists
   # the below line is used to run linux command directly when ansible module is not available
-    ansible.builtin.command: id roboshop
-    register: USERID
+    ansible.builtin.command: id roboshop # this is like how linux command will run in shellscript $() and store in variable and that variable had given under register
+    register: USERID 
+    ignore_errors: true
   
   - name: printing
     ansible.builtin.debug: 
