@@ -1,9 +1,11 @@
 - name: Need to create the user
   hosts: localhost
+  vars:
+    USER: "Roboshop"
   tasks:
   - name: check if the user exists
   # the below line is used to run linux command directly when ansible module is not available
-    ansible.builtin.command: id roboshop # this is like how linux command will run in shellscript $() and store in variable and that variable had given under register
+    ansible.builtin.command: id "{{USER}}" # this is like how linux command will run in shellscript $() and store in variable and that variable had given under register
     register: USERID 
     ignore_errors: true
   
@@ -16,5 +18,5 @@
   - name: creating roboshop user
     become: yes
     ansible.builtin.user:
-      name: Roboshop
+      name: "{{USER}}"
     when: USERID.rc !=0
