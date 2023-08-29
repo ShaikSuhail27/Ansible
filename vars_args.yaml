@@ -1,0 +1,7 @@
+- name: variables from command line
+  hosts: localhost
+  tasks:
+  - name: printing the variables from command line
+    ansible.builtin.debug:
+    # here we are passing the values to the variables from command line
+      msg: My name is {{NAME}} and my age is {{AGE}} years old
