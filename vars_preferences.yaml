@@ -13,4 +13,4 @@
     vars:
       NAME: "SUHAIL-TASK"
     ansible.builtin.debug:
-    msg: "the name is {{NAME}}"
+      msg: "the name is {{NAME}}"
