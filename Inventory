@@ -4,6 +4,7 @@ roboshop-us-dev-db-mongodb.01.suhaildevops.online
 [Mongodb:vars]
 # this variables are used for entire Mongodb hosts /groups
 MONGODB_USERNAME=mongodbadmin
+NAME=SUHAIL-INVENTORY
 
 
 

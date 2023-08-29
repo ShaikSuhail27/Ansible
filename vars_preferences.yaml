@@ -1,0 +1,16 @@
+- name: Variable preferences
+  hosts: Mongodb
+  vars:
+    NAME: "SUHAIL-play"
+  vars_files:
+  - Variable_file.yaml
+  vars_prompt:
+    name: NAME
+    prompt: please enter the name
+    private: false
+  tasks:
+  - name: checking variable preferences
+    vars:
+      NAME: "SUHAIL-TASK"
+    ansible.builtin.debug:
+    msg: "the name is {{NAME}}"
