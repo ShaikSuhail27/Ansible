@@ -1,0 +1,19 @@
+- name: variables at task level
+  hosts: localhost
+  #THIS IS AT PARENT/PLAY LEVEL
+  vars:
+    NAME: "SUHAIL"
+    SALARY: "RS 26000"
+  tasks:
+  - name: inherit from parent/play level
+    ansible.builtin.debug:
+      msg: "My name is {{NAME}} and the salary is {{SALARY}}"
+
+  - name: inherit from play and will do add & overide the variable
+    #Overriding the Salary variable and adding the company variable
+    vars:
+      SALARY: "RS 70000"
+      COMPANY: "AMAZON"
+    ansible.builtin.debug:
+      msg: "My name is {{NAME}} working in the {{COMPANY}} and earning {{SALARY}}"
+  
