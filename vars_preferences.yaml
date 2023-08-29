@@ -10,7 +10,7 @@
     private: false
   tasks:
   - name: checking variable preferences
-    vars:
-      NAME: "SUHAIL-TASK"
+    # vars:
+    #   NAME: "SUHAIL-TASK"
     ansible.builtin.debug:
       msg: "the name is {{NAME}}"
