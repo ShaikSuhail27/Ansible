@@ -3,7 +3,7 @@
   tasks:
   - name: list of names
     ansible.builtin.debug:
-      msg: "The list of names are {{items}}"
+      msg: "The list of names are {{item}}"
       
     loop:
     - Suhail
