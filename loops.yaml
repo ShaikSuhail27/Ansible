@@ -5,8 +5,8 @@
     ansible.builtin.debug:
       msg: "The list of names are {{items}}"
       
-  loop:
-  - Suhail
-  - sunny
-  - sanju
-  - samson
+    loop:
+    - Suhail
+    - sunny
+    - sanju
+    - samson
