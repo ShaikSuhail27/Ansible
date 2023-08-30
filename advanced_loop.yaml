@@ -1,5 +1,6 @@
 - name: advanced loop with list of mapping
   hosts: Mongodb
+  become: yes
   tasks:
   - name: installing and removing the packages
     ansible.builtin.yum:
