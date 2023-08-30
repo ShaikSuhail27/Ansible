@@ -1,0 +1,10 @@
+- name: advanced loop with list of mapping
+  hosts: Mongodb
+  tasks:
+  - name: installing and removing the packages
+    ansible.builtin.yum:
+      name: "{{item.name}}"
+      state: "{{item.state}}"
+    loop:
+    - {name: 'nginx',state: 'absent'}
+    - {name: 'postfix',state: 'installed'}
